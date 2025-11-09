@@ -1,0 +1,48 @@
+[
+  {
+    "id": "WC-01",
+    "code": "PREP-BAY",
+    "name": "Preparation Bay"
+  },
+  {
+    "id": "WC-02",
+    "code": "CHROM-LINE",
+    "name": "Chromatography Line"
+  },
+  {
+    "id": "WC-03",
+    "code": "CIP-SIP",
+    "name": "CIP/SIP Station"
+  },
+  {
+    "id": "WC-04",
+    "code": "FILL-FINISH",
+    "name": "Fill & Finish"
+  },
+  {
+    "id": "WC-ENG",
+    "code": "ENG-DESIGN",
+    "name": "Design Engineering Studio"
+  },
+  {
+    "id": "WC-FAB",
+    "code": "FAB-SHOP",
+    "name": "Fabrication Shop"
+  },
+  {
+    "id": "WC-ASB",
+    "code": "ASSY-BAY",
+    "name": "Assembly Bay"
+  },
+  {
+    "id": "WC-AUTO",
+    "code": "AUTO-LAB",
+    "name": "Automation & Controls Lab"
+  },
+  {
+    "id": "WC-QA",
+    "code": "QA-LAB",
+    "name": "QA Validation Lab"
+  }
+]
+

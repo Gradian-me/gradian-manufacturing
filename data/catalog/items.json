@@ -1,0 +1,91 @@
+[
+  {
+    "id": "MAT-001",
+    "sku": "BIO-MEDIA-500",
+    "name": "Basal Cell Culture Media",
+    "type": "material",
+    "unit": "L",
+    "standard_cost": 125.5
+  },
+  {
+    "id": "MAT-002",
+    "sku": "NUTRI-SUPP-01",
+    "name": "Nutrient Supplement A",
+    "type": "material",
+    "unit": "kg",
+    "standard_cost": 48.75
+  },
+  {
+    "id": "MAT-003",
+    "sku": "BUFFER-PH7",
+    "name": "Phosphate Buffer 7.0",
+    "type": "material",
+    "unit": "L",
+    "standard_cost": 32.4
+  },
+  {
+    "id": "MAT-004",
+    "sku": "FILTER-0.2",
+    "name": "0.2 µm Sterile Filter Cartridge",
+    "type": "component",
+    "unit": "each",
+    "standard_cost": 210
+  },
+  {
+    "id": "MAT-005",
+    "sku": "SENSOR-DO",
+    "name": "Dissolved Oxygen Sensor",
+    "type": "component",
+    "unit": "each",
+    "standard_cost": 640
+  },
+  {
+    "id": "MAT-006",
+    "sku": "SENSOR-PH",
+    "name": "Single Use pH Probe",
+    "type": "component",
+    "unit": "each",
+    "standard_cost": 415
+  },
+  {
+    "id": "RAW-SS316-SHEET",
+    "sku": "SS316-SHEET-3MM",
+    "name": "316L Stainless Steel Sheet 3mm",
+    "type": "material",
+    "unit": "kg",
+    "standard_cost": 27.5
+  },
+  {
+    "id": "RAW-SS316-TUBE",
+    "sku": "SS316-TUBE-2IN",
+    "name": "316L Tubing 2\" OD",
+    "type": "material",
+    "unit": "m",
+    "standard_cost": 18.4
+  },
+  {
+    "id": "MECH-AGITATOR-ASSY",
+    "sku": "AGITATOR-DRV-001",
+    "name": "Bioreactor Agitator Drive Assembly",
+    "type": "component",
+    "unit": "each",
+    "standard_cost": 4850
+  },
+  {
+    "id": "INSTR-PH-LOOP",
+    "sku": "PH-LOOP-IND",
+    "name": "Industrial pH Measurement Loop",
+    "type": "component",
+    "unit": "each",
+    "standard_cost": 1650
+  },
+  {
+    "id": "CTRL-PLC-ADV",
+    "sku": "PLC-BIO-500",
+    "name": "Advanced Bioreactor PLC",
+    "type": "component",
+    "unit": "each",
+    "standard_cost": 9250
+  }
+]
+

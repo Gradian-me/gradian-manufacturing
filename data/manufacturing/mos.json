@@ -1,0 +1,148 @@
+[
+  {
+    "id": "MO-1058",
+    "template_id": "TPL-GRADIAN-BIO-500",
+    "device_code": "BR500-1058",
+    "customer": "CellThera Labs",
+    "status": "in_progress",
+    "priority": "high",
+    "start_date": "2025-11-02",
+    "due_date": "2025-11-16",
+    "snapshot": {
+      "bom": [
+        { "item_id": "MAT-001", "quantity": 480, "unit": "L" },
+        { "item_id": "MAT-002", "quantity": 30, "unit": "kg" },
+        { "item_id": "MAT-003", "quantity": 120, "unit": "L" },
+        { "item_id": "MAT-004", "quantity": 6, "unit": "each" },
+        { "item_id": "MAT-005", "quantity": 2, "unit": "each" },
+        { "item_id": "MAT-006", "quantity": 2, "unit": "each" }
+      ],
+      "routing": [
+        { "operation_id": "MO-1058-OP010", "routing_id": "OP-010", "sequence": 10 },
+        { "operation_id": "MO-1058-OP020", "routing_id": "OP-020", "sequence": 20 },
+        { "operation_id": "MO-1058-OP030", "routing_id": "OP-030", "sequence": 30 },
+        { "operation_id": "MO-1058-OP040", "routing_id": "OP-040", "sequence": 40 },
+        { "operation_id": "MO-1058-OP050", "routing_id": "OP-050", "sequence": 50 },
+        { "operation_id": "MO-1058-OP060", "routing_id": "OP-060", "sequence": 60 },
+        { "operation_id": "MO-1058-OP070", "routing_id": "OP-070", "sequence": 70 },
+        { "operation_id": "MO-1058-OP080", "routing_id": "OP-080", "sequence": 80 },
+        { "operation_id": "MO-1058-OP090", "routing_id": "OP-090", "sequence": 90 }
+      ],
+      "costing": {
+        "standard_material": 98250,
+        "standard_labor": 15480,
+        "standard_equipment": 12840,
+        "standard_overhead": 8650,
+        "currency": "USD"
+      }
+    }
+  },
+  {
+    "id": "MO-1061",
+    "template_id": "TPL-GRADIAN-BIO-500",
+    "device_code": "BR500-1061",
+    "customer": "SynBio Innovations",
+    "status": "planning",
+    "priority": "medium",
+    "start_date": "2025-11-12",
+    "due_date": "2025-11-30",
+    "snapshot": {
+      "bom": [
+        { "item_id": "MAT-001", "quantity": 480, "unit": "L" },
+        { "item_id": "MAT-002", "quantity": 30, "unit": "kg" },
+        { "item_id": "MAT-003", "quantity": 120, "unit": "L" },
+        { "item_id": "MAT-004", "quantity": 6, "unit": "each" },
+        { "item_id": "MAT-005", "quantity": 2, "unit": "each" },
+        { "item_id": "MAT-006", "quantity": 2, "unit": "each" }
+      ],
+      "routing": [
+        { "operation_id": "MO-1061-OP010", "routing_id": "OP-010", "sequence": 10 },
+        { "operation_id": "MO-1061-OP020", "routing_id": "OP-020", "sequence": 20 },
+        { "operation_id": "MO-1061-OP030", "routing_id": "OP-030", "sequence": 30 },
+        { "operation_id": "MO-1061-OP040", "routing_id": "OP-040", "sequence": 40 },
+        { "operation_id": "MO-1061-OP050", "routing_id": "OP-050", "sequence": 50 },
+        { "operation_id": "MO-1061-OP060", "routing_id": "OP-060", "sequence": 60 },
+        { "operation_id": "MO-1061-OP070", "routing_id": "OP-070", "sequence": 70 },
+        { "operation_id": "MO-1061-OP080", "routing_id": "OP-080", "sequence": 80 },
+        { "operation_id": "MO-1061-OP090", "routing_id": "OP-090", "sequence": 90 }
+      ],
+      "costing": {
+        "standard_material": 98250,
+        "standard_labor": 15480,
+        "standard_equipment": 12840,
+        "standard_overhead": 8650,
+        "currency": "USD"
+      }
+    }
+  },
+  {
+    "id": "MO-2042",
+    "template_id": "TPL-GRADIAN-SEED-200",
+    "device_code": "SEED200-2042",
+    "customer": "FutureBio Partners",
+    "status": "completed",
+    "priority": "low",
+    "start_date": "2025-10-18",
+    "due_date": "2025-10-28",
+    "snapshot": {
+      "bom": [
+        { "item_id": "MAT-001", "quantity": 180, "unit": "L" },
+        { "item_id": "MAT-002", "quantity": 12, "unit": "kg" },
+        { "item_id": "MAT-003", "quantity": 70, "unit": "L" },
+        { "item_id": "MAT-004", "quantity": 2, "unit": "each" }
+      ],
+      "routing": [
+        { "operation_id": "MO-2042-OP010", "routing_id": "SD-010", "sequence": 10 },
+        { "operation_id": "MO-2042-OP020", "routing_id": "SD-020", "sequence": 20 },
+        { "operation_id": "MO-2042-OP030", "routing_id": "SD-030", "sequence": 30 },
+        { "operation_id": "MO-2042-OP040", "routing_id": "SD-040", "sequence": 40 },
+        { "operation_id": "MO-2042-OP050", "routing_id": "SD-050", "sequence": 50 }
+      ],
+      "costing": {
+        "standard_material": 45200,
+        "standard_labor": 7920,
+        "standard_equipment": 6320,
+        "standard_overhead": 4100,
+        "currency": "USD"
+      }
+    }
+  },
+  {
+    "id": "MO-3001",
+    "template_id": "TPL-GRADIAN-BIOREACTOR-SYS",
+    "device_code": "BIOFAB-3001",
+    "customer": "NextWave Therapeutics",
+    "status": "in_progress",
+    "priority": "high",
+    "start_date": "2025-09-15",
+    "due_date": "2025-12-05",
+    "snapshot": {
+      "bom": [
+        { "item_id": "RAW-SS316-SHEET", "quantity": 520, "unit": "kg" },
+        { "item_id": "RAW-SS316-TUBE", "quantity": 180, "unit": "m" },
+        { "item_id": "MECH-AGITATOR-ASSY", "quantity": 1, "unit": "each" },
+        { "item_id": "INSTR-PH-LOOP", "quantity": 2, "unit": "each" },
+        { "item_id": "CTRL-PLC-ADV", "quantity": 1, "unit": "each" }
+      ],
+      "routing": [
+        { "operation_id": "MO-3001-ENG010", "routing_id": "ENG-010", "sequence": 10 },
+        { "operation_id": "MO-3001-ENG020", "routing_id": "ENG-020", "sequence": 20 },
+        { "operation_id": "MO-3001-ENG030", "routing_id": "ENG-030", "sequence": 30 },
+        { "operation_id": "MO-3001-PROC040", "routing_id": "PROC-040", "sequence": 40 },
+        { "operation_id": "MO-3001-FAB050", "routing_id": "FAB-050", "sequence": 50 },
+        { "operation_id": "MO-3001-FAB060", "routing_id": "FAB-060", "sequence": 60 },
+        { "operation_id": "MO-3001-AUTO070", "routing_id": "AUTO-070", "sequence": 70 },
+        { "operation_id": "MO-3001-QA080", "routing_id": "QA-080", "sequence": 80 },
+        { "operation_id": "MO-3001-PKG090", "routing_id": "PKG-090", "sequence": 90 }
+      ],
+      "costing": {
+        "standard_material": 186500,
+        "standard_labor": 62400,
+        "standard_equipment": 45200,
+        "standard_overhead": 33800,
+        "currency": "USD"
+      }
+    }
+  }
+]
+

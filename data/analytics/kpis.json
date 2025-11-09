@@ -1,0 +1,133 @@
+{
+  "cards": [
+    {
+      "id": "wip-orders",
+      "label": "WIP Manufacturing Orders",
+      "value": 5,
+      "unit": "orders",
+      "delta": -1,
+      "direction": "down",
+      "description": "Orders currently in execution vs. last week."
+    },
+    {
+      "id": "cycle-time",
+      "label": "Avg. Cycle Time",
+      "value": 12.6,
+      "unit": "days",
+      "delta": -0.8,
+      "direction": "down",
+      "description": "Rolling 30-day average."
+    },
+    {
+      "id": "yield",
+      "label": "First Pass Yield",
+      "value": 93.4,
+      "unit": "%",
+      "delta": 1.2,
+      "direction": "up",
+      "description": "Across all released batches."
+    },
+    {
+      "id": "variance",
+      "label": "Cost Variance",
+      "value": -4.2,
+      "unit": "%",
+      "delta": 0.6,
+      "direction": "up",
+      "description": "Actual vs. standard for current month."
+    }
+  ],
+  "charts": {
+    "wipTrend": {
+      "title": "WIP by Stage",
+      "type": "line",
+      "series": [
+        {
+          "name": "Preparation",
+          "data": [
+            ["2025-10-20", 3],
+            ["2025-10-27", 2],
+            ["2025-11-03", 4],
+            ["2025-11-10", 3]
+          ]
+        },
+        {
+          "name": "Culture",
+          "data": [
+            ["2025-10-20", 5],
+            ["2025-10-27", 6],
+            ["2025-11-03", 5],
+            ["2025-11-10", 4]
+          ]
+        },
+        {
+          "name": "Harvest",
+          "data": [
+            ["2025-10-20", 2],
+            ["2025-10-27", 2],
+            ["2025-11-03", 3],
+            ["2025-11-10", 2]
+          ]
+        }
+      ]
+    },
+    "costVariance": {
+      "title": "Standard vs. Actual Cost",
+      "type": "bar",
+      "series": [
+        {
+          "name": "Standard",
+          "data": [
+            ["TPL-GRADIAN-BIO-500", 135220],
+            ["TPL-GRADIAN-SEED-200", 63540]
+          ]
+        },
+        {
+          "name": "Actual",
+          "data": [
+            ["TPL-GRADIAN-BIO-500", 139800],
+            ["TPL-GRADIAN-SEED-200", 61250]
+          ]
+        }
+      ]
+    },
+    "resourceUtilization": {
+      "title": "Resource Utilization",
+      "type": "radar",
+      "indicators": [
+        { "name": "Bioreactor BR-500", "max": 100 },
+        { "name": "ACTA Prime", "max": 100 },
+        { "name": "Technicians", "max": 100 },
+        { "name": "Process Engineers", "max": 100 },
+        { "name": "QA Specialists", "max": 100 }
+      ],
+      "series": [
+        {
+          "name": "Current Month",
+          "data": [78, 65, 82, 74, 69]
+        },
+        {
+          "name": "Target",
+          "data": [85, 80, 90, 88, 80]
+        }
+      ]
+    }
+  },
+  "filters": {
+    "dateRanges": [
+      { "label": "Last 7 days", "value": "7d" },
+      { "label": "Last 30 days", "value": "30d" },
+      { "label": "Quarter to date", "value": "qtd" }
+    ],
+    "customers": [
+      "CellThera Labs",
+      "SynBio Innovations",
+      "FutureBio Partners"
+    ],
+    "templates": [
+      "TPL-GRADIAN-BIO-500",
+      "TPL-GRADIAN-SEED-200"
+    ]
+  }
+}
+

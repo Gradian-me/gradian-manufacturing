@@ -1,0 +1,67 @@
+[
+  {
+    "id": "EQ-001",
+    "code": "BR-500",
+    "name": "Stainless Steel Bioreactor 500L",
+    "hourly_rate": 185,
+    "capacity_liters": 500,
+    "work_center_id": "WC-01"
+  },
+  {
+    "id": "EQ-002",
+    "code": "ACTA-PRIME",
+    "name": "ACTA Prime Chromatography System",
+    "hourly_rate": 220,
+    "capacity_liters": 50,
+    "work_center_id": "WC-02"
+  },
+  {
+    "id": "EQ-003",
+    "code": "CIP-200",
+    "name": "CIP/SIP Skid 200L",
+    "hourly_rate": 95,
+    "capacity_liters": 200,
+    "work_center_id": "WC-03"
+  },
+  {
+    "id": "EQ-004",
+    "code": "FILL-100",
+    "name": "Automated Filling Station",
+    "hourly_rate": 160,
+    "capacity_units_per_hour": 120,
+    "work_center_id": "WC-04"
+  },
+  {
+    "id": "EQ-005",
+    "code": "CNC-500",
+    "name": "5-Axis CNC Machining Center",
+    "hourly_rate": 145,
+    "capacity_liters": 0,
+    "work_center_id": "WC-FAB"
+  },
+  {
+    "id": "EQ-006",
+    "code": "WELD-ORBITAL",
+    "name": "Orbital Welding Station",
+    "hourly_rate": 120,
+    "capacity_liters": 0,
+    "work_center_id": "WC-FAB"
+  },
+  {
+    "id": "EQ-007",
+    "code": "AUTO-RACK",
+    "name": "Automation Integration Bench",
+    "hourly_rate": 135,
+    "capacity_liters": 0,
+    "work_center_id": "WC-AUTO"
+  },
+  {
+    "id": "EQ-008",
+    "code": "QA-CLEAN",
+    "name": "Validation Clean Lab",
+    "hourly_rate": 115,
+    "capacity_liters": 0,
+    "work_center_id": "WC-QA"
+  }
+]
+

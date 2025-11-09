@@ -1,0 +1,243 @@
+[
+  {
+    "operation_id": "MO-1058-OP010",
+    "mo_id": "MO-1058",
+    "routing_id": "OP-010",
+    "status": "complete",
+    "started_at": "2025-11-02T08:15:00Z",
+    "completed_at": "2025-11-02T10:45:00Z",
+    "labor_logs": [
+      {
+        "id": "LABLOG-1001",
+        "labor_grade_id": "LAB-TECH",
+        "person": "Mahyar Abidi",
+        "hours": 2.5
+      }
+    ],
+    "equipment_logs": [
+      {
+        "id": "EQLOG-9001",
+        "equipment_id": "EQ-001",
+        "hours": 2.5
+      }
+    ],
+    "material_issues": [
+      {
+        "id": "MATISS-5001",
+        "item_id": "MAT-001",
+        "quantity": 480,
+        "unit": "L"
+      },
+      {
+        "id": "MATISS-5002",
+        "item_id": "MAT-002",
+        "quantity": 30,
+        "unit": "kg"
+      }
+    ],
+    "holds": [],
+    "qa_checks": [
+      {
+        "id": "QA-CHK-100",
+        "passed": true,
+        "notes": "Media blended and homogenized per spec."
+      }
+    ]
+  },
+  {
+    "operation_id": "MO-1058-OP020",
+    "mo_id": "MO-1058",
+    "routing_id": "OP-020",
+    "status": "complete",
+    "started_at": "2025-11-02T11:15:00Z",
+    "completed_at": "2025-11-02T11:55:00Z",
+    "labor_logs": [
+      {
+        "id": "LABLOG-1002",
+        "labor_grade_id": "LAB-ENG",
+        "person": "Samantha Ortiz",
+        "hours": 0.75
+      }
+    ],
+    "equipment_logs": [
+      {
+        "id": "EQLOG-9002",
+        "equipment_id": "EQ-001",
+        "hours": 0.75
+      }
+    ],
+    "material_issues": [
+      {
+        "id": "MATISS-5003",
+        "item_id": "MAT-005",
+        "quantity": 1,
+        "unit": "each"
+      },
+      {
+        "id": "MATISS-5004",
+        "item_id": "MAT-006",
+        "quantity": 1,
+        "unit": "each"
+      }
+    ],
+    "holds": [],
+    "qa_checks": [
+      {
+        "id": "QA-CHK-101",
+        "passed": true,
+        "notes": "Sensors calibrated and QA-signed."
+      }
+    ]
+  },
+  {
+    "operation_id": "MO-1058-OP030",
+    "mo_id": "MO-1058",
+    "routing_id": "OP-030",
+    "status": "in_progress",
+    "started_at": "2025-11-03T05:30:00Z",
+    "labor_logs": [
+      {
+        "id": "LABLOG-1003",
+        "labor_grade_id": "LAB-TECH",
+        "person": "Mahyar Abidi",
+        "hours": 1.2
+      }
+    ],
+    "equipment_logs": [
+      {
+        "id": "EQLOG-9003",
+        "equipment_id": "EQ-003",
+        "hours": 1.2
+      }
+    ],
+    "material_issues": [],
+    "holds": [
+      {
+        "id": "HOLD-2001",
+        "reason": "Steam pressure drift observed, trending for 10 min.",
+        "released": false
+      }
+    ],
+    "qa_checks": []
+  },
+  {
+    "operation_id": "MO-2042-OP050",
+    "mo_id": "MO-2042",
+    "routing_id": "SD-050",
+    "status": "complete",
+    "started_at": "2025-10-25T06:00:00Z",
+    "completed_at": "2025-10-25T09:10:00Z",
+    "labor_logs": [
+      {
+        "id": "LABLOG-1015",
+        "labor_grade_id": "LAB-TECH",
+        "person": "Hannah Cole",
+        "hours": 3
+      }
+    ],
+    "equipment_logs": [
+      {
+        "id": "EQLOG-9010",
+        "equipment_id": "EQ-002",
+        "hours": 3
+      }
+    ],
+    "material_issues": [
+      {
+        "id": "MATISS-5101",
+        "item_id": "MAT-003",
+        "quantity": 40,
+        "unit": "L"
+      }
+    ],
+    "holds": [],
+    "qa_checks": [
+      {
+        "id": "QA-CHK-145",
+        "passed": true,
+        "notes": "Clarified seed lot released."
+      }
+    ]
+  },
+  {
+    "operation_id": "MO-3001-ENG010",
+    "mo_id": "MO-3001",
+    "routing_id": "ENG-010",
+    "status": "complete",
+    "started_at": "2025-09-18T08:00:00Z",
+    "completed_at": "2025-09-18T16:00:00Z",
+    "labor_logs": [
+      {
+        "id": "LABLOG-2001",
+        "labor_grade_id": "LAB-DESIGN",
+        "person": "Priya Narayanan",
+        "hours": 8
+      }
+    ],
+    "equipment_logs": [],
+    "material_issues": [],
+    "holds": [],
+    "qa_checks": []
+  },
+  {
+    "operation_id": "MO-3001-FAB050",
+    "mo_id": "MO-3001",
+    "routing_id": "FAB-050",
+    "status": "in_progress",
+    "started_at": "2025-10-12T06:30:00Z",
+    "labor_logs": [
+      {
+        "id": "LABLOG-2005",
+        "labor_grade_id": "LAB-WELD",
+        "person": "Carlos Mendes",
+        "hours": 14.5
+      }
+    ],
+    "equipment_logs": [
+      {
+        "id": "EQLOG-9201",
+        "equipment_id": "EQ-005",
+        "hours": 9.5
+      },
+      {
+        "id": "EQLOG-9202",
+        "equipment_id": "EQ-006",
+        "hours": 5.0
+      }
+    ],
+    "material_issues": [
+      {
+        "id": "MATISS-6001",
+        "item_id": "RAW-SS316-SHEET",
+        "quantity": 210,
+        "unit": "kg"
+      },
+      {
+        "id": "MATISS-6002",
+        "item_id": "RAW-SS316-TUBE",
+        "quantity": 60,
+        "unit": "m"
+      }
+    ],
+    "holds": [
+      {
+        "id": "HOLD-3100",
+        "reason": "Awaiting updated weld procedure qualification record.",
+        "released": true
+      }
+    ],
+    "qa_checks": []
+  },
+  {
+    "operation_id": "MO-3001-QA080",
+    "mo_id": "MO-3001",
+    "routing_id": "QA-080",
+    "status": "pending",
+    "labor_logs": [],
+    "equipment_logs": [],
+    "material_issues": [],
+    "holds": [],
+    "qa_checks": []
+  }
+]
+

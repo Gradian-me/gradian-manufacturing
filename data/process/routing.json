@@ -1,0 +1,219 @@
+[
+  {
+    "id": "OP-010",
+    "name": "Media Preparation",
+    "default_duration_min": 120,
+    "work_center_id": "WC-01",
+    "labor_grade_id": "LAB-TECH",
+    "description": "Hydrate basal media, add nutrient supplements and buffer adjustments per SOP-PREP-001.",
+    "resource_notes": [
+      "Requires stainless steel bioreactor BR-500 cleaned and verified.",
+      "Verify raw material lot traceability before dispensing."
+    ]
+  },
+  {
+    "id": "OP-020",
+    "name": "Instrumentation Calibration",
+    "default_duration_min": 45,
+    "work_center_id": "WC-01",
+    "labor_grade_id": "LAB-ENG",
+    "description": "Calibrate and verify sensors prior to charge. QA sign-off required before proceeding.",
+    "resource_notes": [
+      "Calibration performed with DO and pH sensor kits.",
+      "Record calibration curves in LIMS."
+    ]
+  },
+  {
+    "id": "OP-030",
+    "name": "CIP and SIP",
+    "default_duration_min": 150,
+    "work_center_id": "WC-03",
+    "labor_grade_id": "LAB-TECH",
+    "description": "Execute cleaning in place and steam in place cycles per CIP/SIP recipes.",
+    "resource_notes": [
+      "Cycle must reach validated temperature profiles.",
+      "QA release required before introduction of media."
+    ]
+  },
+  {
+    "id": "OP-040",
+    "name": "Charge & Inoculate",
+    "default_duration_min": 120,
+    "work_center_id": "WC-01",
+    "labor_grade_id": "LAB-ENG",
+    "description": "Charge sterile media and inoculate culture with validated seed lot.",
+    "resource_notes": [
+      "Ensure inoculum viability >95%.",
+      "Maintain aseptic technique throughout charge."
+    ]
+  },
+  {
+    "id": "OP-050",
+    "name": "Culture Monitor",
+    "default_duration_min": 1440,
+    "work_center_id": "WC-01",
+    "labor_grade_id": "LAB-OPS",
+    "description": "Monitor culture for critical parameters, adjust feeds and maintain setpoints.",
+    "resource_notes": [
+      "Record hourly DO, pH, temperature in MES log.",
+      "Trigger hold state if DO drops below 30%."
+    ]
+  },
+  {
+    "id": "OP-060",
+    "name": "Harvest & Clarify",
+    "default_duration_min": 180,
+    "work_center_id": "WC-02",
+    "labor_grade_id": "LAB-TECH",
+    "description": "Clarify broth and transfer to chromatography feed tank.",
+    "resource_notes": [
+      "Set centrifuge to validated speed profile.",
+      "Perform bioburden sample post-clarification."
+    ]
+  },
+  {
+    "id": "OP-070",
+    "name": "Chromatography Capture",
+    "default_duration_min": 180,
+    "work_center_id": "WC-02",
+    "labor_grade_id": "LAB-ENG",
+    "description": "Load clarified feed to chromatography column following ACTA recipe.",
+    "resource_notes": [
+      "Capture yield target: >88%.",
+      "Record conductivity and UV traces."
+    ]
+  },
+  {
+    "id": "OP-080",
+    "name": "CIP Flush",
+    "default_duration_min": 45,
+    "work_center_id": "WC-03",
+    "labor_grade_id": "LAB-TECH",
+    "description": "Perform final CIP flush to return vessel to standby state.",
+    "resource_notes": [
+      "Neutralize effluent per EH&S requirements.",
+      "Complete equipment logbook entries."
+    ]
+  },
+  {
+    "id": "OP-090",
+    "name": "QA Release Review",
+    "default_duration_min": 60,
+    "work_center_id": "WC-04",
+    "labor_grade_id": "LAB-QA",
+    "description": "QA reviews batch records, deviations, and quality test results for release.",
+    "resource_notes": [
+      "All critical deviations must be dispositioned.",
+      "Release decision logged in QMS."
+    ]
+  },
+  {
+    "id": "ENG-010",
+    "name": "Requirements Definition",
+    "default_duration_min": 240,
+    "work_center_id": "WC-ENG",
+    "labor_grade_id": "LAB-DESIGN",
+    "description": "Capture URS, process requirements, and create initial concept package.",
+    "resource_notes": [
+      "Collaborate with process SMEs for clarification.",
+      "Publish concept P&ID and scope statement."
+    ]
+  },
+  {
+    "id": "ENG-020",
+    "name": "Mechanical Design",
+    "default_duration_min": 480,
+    "work_center_id": "WC-ENG",
+    "labor_grade_id": "LAB-DESIGN",
+    "description": "Generate 3D CAD, nozzle schedules, and fabrication drawings.",
+    "resource_notes": [
+      "Verify ASME BPE compliance for hygienic surfaces.",
+      "Review design with stress analysis and maintain revision control."
+    ]
+  },
+  {
+    "id": "ENG-030",
+    "name": "Automation Architecture",
+    "default_duration_min": 360,
+    "work_center_id": "WC-AUTO",
+    "labor_grade_id": "LAB-AUTO",
+    "description": "Define PLC/SCADA architecture, I/O list, and control narratives.",
+    "resource_notes": [
+      "Specify sensor models and calibration requirements.",
+      "Update electrical schematics and network topology."
+    ]
+  },
+  {
+    "id": "PROC-040",
+    "name": "Strategic Procurement",
+    "default_duration_min": 240,
+    "work_center_id": "WC-ENG",
+    "labor_grade_id": "LAB-DESIGN",
+    "description": "Issue RFQs, evaluate vendors, and release purchase orders for long-lead items.",
+    "resource_notes": [
+      "Capture supplier certifications and lead times.",
+      "Align deliveries with fabrication milestones."
+    ]
+  },
+  {
+    "id": "FAB-050",
+    "name": "Vessel Fabrication",
+    "default_duration_min": 720,
+    "work_center_id": "WC-FAB",
+    "labor_grade_id": "LAB-WELD",
+    "description": "Cut, roll, weld, and polish vessel shell and heads.",
+    "resource_notes": [
+      "Perform hydrostatic test post-weld.",
+      "Document weld maps and inspection reports."
+    ]
+  },
+  {
+    "id": "FAB-060",
+    "name": "Mechanical Assembly",
+    "default_duration_min": 360,
+    "work_center_id": "WC-ASB",
+    "labor_grade_id": "LAB-WELD",
+    "description": "Install agitator, jackets, ports, and utility manifolds on skid.",
+    "resource_notes": [
+      "Torque critical fasteners per spec.",
+      "Verify alignment of rotating assemblies."
+    ]
+  },
+  {
+    "id": "AUTO-070",
+    "name": "Controls Integration",
+    "default_duration_min": 420,
+    "work_center_id": "WC-AUTO",
+    "labor_grade_id": "LAB-AUTO",
+    "description": "Wire control panel, load PLC code, and perform I/O checkout.",
+    "resource_notes": [
+      "Document firmware versions and logic revisions.",
+      "Complete loop checks with simulation bench."
+    ]
+  },
+  {
+    "id": "QA-080",
+    "name": "Factory Acceptance Testing",
+    "default_duration_min": 360,
+    "work_center_id": "WC-QA",
+    "labor_grade_id": "LAB-QC",
+    "description": "Execute FAT protocol including pressure test, CIP/SIP simulation, and control verification.",
+    "resource_notes": [
+      "Capture deviations and corrective actions.",
+      "Compile calibration and traceability dossier."
+    ]
+  },
+  {
+    "id": "PKG-090",
+    "name": "Crating & Logistics",
+    "default_duration_min": 180,
+    "work_center_id": "WC-ASB",
+    "labor_grade_id": "LAB-WELD",
+    "description": "Prepare unit for shipment with protective wrapping and custom crating.",
+    "resource_notes": [
+      "Purge with nitrogen where required.",
+      "Include manuals, FAT report, and spare kit."
+    ]
+  }
+]
+

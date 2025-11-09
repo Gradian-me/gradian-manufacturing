@@ -1,0 +1,43 @@
+[
+  {
+    "id": "LAB-ENG",
+    "grade": "Process Engineer",
+    "hourly_rate": 85
+  },
+  {
+    "id": "LAB-TECH",
+    "grade": "Manufacturing Technician",
+    "hourly_rate": 48
+  },
+  {
+    "id": "LAB-QA",
+    "grade": "QA Specialist",
+    "hourly_rate": 72
+  },
+  {
+    "id": "LAB-OPS",
+    "grade": "Operations Supervisor",
+    "hourly_rate": 96
+  },
+  {
+    "id": "LAB-DESIGN",
+    "grade": "Mechanical Design Engineer",
+    "hourly_rate": 110
+  },
+  {
+    "id": "LAB-WELD",
+    "grade": "Fabrication Welder",
+    "hourly_rate": 68
+  },
+  {
+    "id": "LAB-AUTO",
+    "grade": "Automation Engineer",
+    "hourly_rate": 105
+  },
+  {
+    "id": "LAB-QC",
+    "grade": "Validation Specialist",
+    "hourly_rate": 98
+  }
+]
+

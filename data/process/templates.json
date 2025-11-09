@@ -1,0 +1,362 @@
+[
+  {
+    "id": "TPL-GRADIAN-BIO-500",
+    "name": "Gradian BioReactor 500L",
+    "version": "1.2.0",
+    "status": "released",
+    "customer_fit": [
+      "CellThera Labs",
+      "SynBio Innovations"
+    ],
+    "bom": [
+      {
+        "item_id": "MAT-001",
+        "quantity": 480,
+        "unit": "L",
+        "usage_type": "process"
+      },
+      {
+        "item_id": "MAT-002",
+        "quantity": 30,
+        "unit": "kg",
+        "usage_type": "nutrient"
+      },
+      {
+        "item_id": "MAT-003",
+        "quantity": 120,
+        "unit": "L",
+        "usage_type": "buffer"
+      },
+      {
+        "item_id": "MAT-004",
+        "quantity": 6,
+        "unit": "each",
+        "usage_type": "assembly"
+      },
+      {
+        "item_id": "MAT-005",
+        "quantity": 2,
+        "unit": "each",
+        "usage_type": "instrument"
+      },
+      {
+        "item_id": "MAT-006",
+        "quantity": 2,
+        "unit": "each",
+        "usage_type": "instrument"
+      }
+    ],
+    "routing": [
+      {
+        "id": "OP-010",
+        "name": "Media Preparation",
+        "sequence": 10,
+        "work_center_id": "WC-01",
+        "labor_grade_id": "LAB-TECH",
+        "duration_min": 120,
+        "opc_node_id": "prep-media"
+      },
+      {
+        "id": "OP-020",
+        "name": "Instrumentation Calibration",
+        "sequence": 20,
+        "work_center_id": "WC-01",
+        "labor_grade_id": "LAB-ENG",
+        "duration_min": 45,
+        "opc_node_id": "prep-calibrate"
+      },
+      {
+        "id": "OP-030",
+        "name": "CIP & SIP",
+        "sequence": 30,
+        "work_center_id": "WC-03",
+        "labor_grade_id": "LAB-TECH",
+        "duration_min": 150,
+        "opc_node_id": "ster-sip"
+      },
+      {
+        "id": "OP-040",
+        "name": "Charge & Inoculate",
+        "sequence": 40,
+        "work_center_id": "WC-01",
+        "labor_grade_id": "LAB-ENG",
+        "duration_min": 120,
+        "opc_node_id": "inoc-sample"
+      },
+      {
+        "id": "OP-050",
+        "name": "Culture Monitor",
+        "sequence": 50,
+        "work_center_id": "WC-01",
+        "labor_grade_id": "LAB-OPS",
+        "duration_min": 1440,
+        "opc_node_id": "culture-monitor"
+      },
+      {
+        "id": "OP-060",
+        "name": "Harvest & Clarify",
+        "sequence": 60,
+        "work_center_id": "WC-02",
+        "labor_grade_id": "LAB-TECH",
+        "duration_min": 180,
+        "opc_node_id": "harvest-clarify"
+      },
+      {
+        "id": "OP-070",
+        "name": "Chromatography Capture",
+        "sequence": 70,
+        "work_center_id": "WC-02",
+        "labor_grade_id": "LAB-ENG",
+        "duration_min": 180,
+        "opc_node_id": "harvest-chrom"
+      },
+      {
+        "id": "OP-080",
+        "name": "CIP Flush",
+        "sequence": 80,
+        "work_center_id": "WC-03",
+        "labor_grade_id": "LAB-TECH",
+        "duration_min": 45,
+        "opc_node_id": "cip-flush"
+      },
+      {
+        "id": "OP-090",
+        "name": "QA Release Review",
+        "sequence": 90,
+        "work_center_id": "WC-04",
+        "labor_grade_id": "LAB-QA",
+        "duration_min": 60,
+        "opc_node_id": "qa-release"
+      }
+    ],
+    "costing": {
+      "standard_material": 98250,
+      "standard_labor": 15480,
+      "standard_equipment": 12840,
+      "standard_overhead": 8650,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "TPL-GRADIAN-SEED-200",
+    "name": "Seed Train Expansion 200L",
+    "version": "0.9.0",
+    "status": "draft",
+    "customer_fit": [
+      "FutureBio Partners"
+    ],
+    "bom": [
+      {
+        "item_id": "MAT-001",
+        "quantity": 180,
+        "unit": "L",
+        "usage_type": "process"
+      },
+      {
+        "item_id": "MAT-002",
+        "quantity": 12,
+        "unit": "kg",
+        "usage_type": "nutrient"
+      },
+      {
+        "item_id": "MAT-003",
+        "quantity": 70,
+        "unit": "L",
+        "usage_type": "buffer"
+      },
+      {
+        "item_id": "MAT-004",
+        "quantity": 2,
+        "unit": "each",
+        "usage_type": "assembly"
+      }
+    ],
+    "routing": [
+      {
+        "id": "SD-010",
+        "name": "Seed Culture Prep",
+        "sequence": 10,
+        "work_center_id": "WC-01",
+        "labor_grade_id": "LAB-TECH",
+        "duration_min": 95,
+        "opc_node_id": "prep-media"
+      },
+      {
+        "id": "SD-020",
+        "name": "Sterilize Loop",
+        "sequence": 20,
+        "work_center_id": "WC-03",
+        "labor_grade_id": "LAB-TECH",
+        "duration_min": 120,
+        "opc_node_id": "ster-cip"
+      },
+      {
+        "id": "SD-030",
+        "name": "Inoculate Seed",
+        "sequence": 30,
+        "work_center_id": "WC-01",
+        "labor_grade_id": "LAB-ENG",
+        "duration_min": 60,
+        "opc_node_id": "inoc-sample"
+      },
+      {
+        "id": "SD-040",
+        "name": "Culture Maintain",
+        "sequence": 40,
+        "work_center_id": "WC-01",
+        "labor_grade_id": "LAB-OPS",
+        "duration_min": 720,
+        "opc_node_id": "culture-monitor"
+      },
+      {
+        "id": "SD-050",
+        "name": "Harvest Seed",
+        "sequence": 50,
+        "work_center_id": "WC-02",
+        "labor_grade_id": "LAB-TECH",
+        "duration_min": 120,
+        "opc_node_id": "harvest-clarify"
+      }
+    ],
+    "costing": {
+      "standard_material": 45200,
+      "standard_labor": 7920,
+      "standard_equipment": 6320,
+      "standard_overhead": 4100,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "TPL-GRADIAN-BIOREACTOR-SYS",
+    "name": "Bioreactor System Fabrication",
+    "version": "1.0.0",
+    "status": "engineering",
+    "customer_fit": [
+      "Pharma OEM Accounts",
+      "Global CDMO Programs"
+    ],
+    "bom": [
+      {
+        "item_id": "RAW-SS316-SHEET",
+        "quantity": 520,
+        "unit": "kg",
+        "usage_type": "raw-material"
+      },
+      {
+        "item_id": "RAW-SS316-TUBE",
+        "quantity": 180,
+        "unit": "m",
+        "usage_type": "piping"
+      },
+      {
+        "item_id": "MECH-AGITATOR-ASSY",
+        "quantity": 1,
+        "unit": "each",
+        "usage_type": "mechanical"
+      },
+      {
+        "item_id": "INSTR-PH-LOOP",
+        "quantity": 2,
+        "unit": "each",
+        "usage_type": "instrumentation"
+      },
+      {
+        "item_id": "CTRL-PLC-ADV",
+        "quantity": 1,
+        "unit": "each",
+        "usage_type": "automation"
+      }
+    ],
+    "routing": [
+      {
+        "id": "ENG-010",
+        "name": "Requirements Definition",
+        "sequence": 10,
+        "work_center_id": "WC-ENG",
+        "labor_grade_id": "LAB-DESIGN",
+        "duration_min": 240,
+        "opc_node_id": "design-requirements"
+      },
+      {
+        "id": "ENG-020",
+        "name": "Mechanical Design",
+        "sequence": 20,
+        "work_center_id": "WC-ENG",
+        "labor_grade_id": "LAB-DESIGN",
+        "duration_min": 480,
+        "opc_node_id": "design-mechanical"
+      },
+      {
+        "id": "ENG-030",
+        "name": "Automation Architecture",
+        "sequence": 30,
+        "work_center_id": "WC-AUTO",
+        "labor_grade_id": "LAB-AUTO",
+        "duration_min": 360,
+        "opc_node_id": "design-automation"
+      },
+      {
+        "id": "PROC-040",
+        "name": "Strategic Procurement",
+        "sequence": 40,
+        "work_center_id": "WC-ENG",
+        "labor_grade_id": "LAB-DESIGN",
+        "duration_min": 240,
+        "opc_node_id": "procurement-sourcing"
+      },
+      {
+        "id": "FAB-050",
+        "name": "Vessel Fabrication",
+        "sequence": 50,
+        "work_center_id": "WC-FAB",
+        "labor_grade_id": "LAB-WELD",
+        "duration_min": 720,
+        "opc_node_id": "fabrication-vessel"
+      },
+      {
+        "id": "FAB-060",
+        "name": "Mechanical Assembly",
+        "sequence": 60,
+        "work_center_id": "WC-ASB",
+        "labor_grade_id": "LAB-WELD",
+        "duration_min": 360,
+        "opc_node_id": "assembly-skid"
+      },
+      {
+        "id": "AUTO-070",
+        "name": "Controls Integration",
+        "sequence": 70,
+        "work_center_id": "WC-AUTO",
+        "labor_grade_id": "LAB-AUTO",
+        "duration_min": 420,
+        "opc_node_id": "automation-controls"
+      },
+      {
+        "id": "QA-080",
+        "name": "Factory Acceptance Testing",
+        "sequence": 80,
+        "work_center_id": "WC-QA",
+        "labor_grade_id": "LAB-QC",
+        "duration_min": 360,
+        "opc_node_id": "testing-fat"
+      },
+      {
+        "id": "PKG-090",
+        "name": "Crating & Logistics",
+        "sequence": 90,
+        "work_center_id": "WC-ASB",
+        "labor_grade_id": "LAB-WELD",
+        "duration_min": 180,
+        "opc_node_id": "packaging-crate"
+      }
+    ],
+    "costing": {
+      "standard_material": 186500,
+      "standard_labor": 62400,
+      "standard_equipment": 45200,
+      "standard_overhead": 33800,
+      "currency": "USD"
+    }
+  }
+]
+
