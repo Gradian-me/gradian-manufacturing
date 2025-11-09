@@ -18,7 +18,7 @@ import type { OpcEdge, OpcGraph, OpcNode } from "@/lib/types/process";
 
 cytoscape.use(coseBilkent);
 
-const OPC_STYLESHEET: cytoscape.Stylesheet[] = [
+const OPC_STYLESHEET: cytoscape.StylesheetStyle[] = [
   {
     selector: "node",
     style: {
@@ -36,28 +36,28 @@ const OPC_STYLESHEET: cytoscape.Stylesheet[] = [
       shape: "round-rectangle",
       "border-width": 2,
       "border-color": "#8b5cf6",
-    },
+    } as unknown as cytoscape.Css.Node,
   },
   {
     selector: "node.kind-check",
     style: {
       "background-color": "#dcfce7",
       "border-color": "#16a34a",
-    },
+    } as unknown as cytoscape.Css.Node,
   },
   {
     selector: "node.kind-hold",
     style: {
       "background-color": "#fee2e2",
       "border-color": "#ef4444",
-    },
+    } as unknown as cytoscape.Css.Node,
   },
   {
     selector: "node.quality-gate",
     style: {
       "border-style": "double",
       "border-width": 4,
-    },
+    } as unknown as cytoscape.Css.Node,
   },
   {
     selector: "node.highlight",
@@ -66,7 +66,7 @@ const OPC_STYLESHEET: cytoscape.Stylesheet[] = [
       "border-width": 6,
       "border-style": "solid",
       "box-shadow": "0px 0px 12px rgba(14,165,233,0.6)",
-    },
+    } as unknown as cytoscape.Css.Node,
   },
   {
     selector: "node.phase-group",
@@ -78,7 +78,7 @@ const OPC_STYLESHEET: cytoscape.Stylesheet[] = [
       "padding": "24px",
       "text-margin-y": "-16px",
       "font-size": "13px",
-    },
+    } as unknown as cytoscape.Css.Node,
   },
   {
     selector: "edge",
@@ -94,7 +94,7 @@ const OPC_STYLESHEET: cytoscape.Stylesheet[] = [
       "text-background-opacity": 1,
       "text-background-color": "#ffffff",
       "text-background-padding": "2px",
-    },
+    } as unknown as cytoscape.Css.Edge,
   },
   {
     selector: "edge.critical",
@@ -102,7 +102,7 @@ const OPC_STYLESHEET: cytoscape.Stylesheet[] = [
       width: 3,
       "line-color": "#f97316",
       "target-arrow-color": "#f97316",
-    },
+    } as unknown as cytoscape.Css.Edge,
   },
 ];
 

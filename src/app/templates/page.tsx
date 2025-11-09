@@ -6,23 +6,31 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { TemplateCard } from "@/features/process-design/components/template-card";
 import { useTemplateData } from "@/features/process-design/hooks/use-templates";
+import type { CatalogItem, LaborGrade } from "@/lib/types/catalog";
+import type { RoutingDefinition } from "@/lib/types/process";
 
 export default function TemplatesPage() {
   const { data, isLoading, isError, error } = useTemplateData();
 
   const itemsById = useMemo(() => {
-    if (!data) return new Map<string, (typeof data.items)[number]>();
-    return new Map(data.items.map((item) => [item.id, item]));
+    const entries = data?.items ?? [];
+    return new Map<string, CatalogItem>(
+      entries.map((item) => [item.id, item]),
+    );
   }, [data]);
 
   const laborById = useMemo(() => {
-    if (!data) return new Map<string, (typeof data.labor)[number]>();
-    return new Map(data.labor.map((grade) => [grade.id, grade]));
+    const entries = data?.labor ?? [];
+    return new Map<string, LaborGrade>(
+      entries.map((grade) => [grade.id, grade]),
+    );
   }, [data]);
 
   const routingById = useMemo(() => {
-    if (!data) return new Map<string, (typeof data.routing)[number]>();
-    return new Map(data.routing.map((routing) => [routing.id, routing]));
+    const entries = data?.routing ?? [];
+    return new Map<string, RoutingDefinition>(
+      entries.map((routing) => [routing.id, routing]),
+    );
   }, [data]);
 
   return (

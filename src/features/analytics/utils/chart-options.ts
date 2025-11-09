@@ -1,4 +1,5 @@
 import type { AnalyticsPayload, ChartConfig } from "@/lib/types/analytics";
+import type { EChartsOption } from "echarts";
 
 export function buildLineChartOption(config: ChartConfig) {
   if (!config.series) {
@@ -6,26 +7,27 @@ export function buildLineChartOption(config: ChartConfig) {
   }
 
   const [firstSeries] = config.series;
-  return {
+  const option: EChartsOption = {
     title: { text: config.title, left: "left" },
-    tooltip: { trigger: "axis" },
+    tooltip: { trigger: "axis" as const },
     legend: { bottom: 0 },
     grid: { left: 32, right: 12, top: 48, bottom: 48 },
     xAxis: {
-      type: "category",
+      type: "category" as const,
       data: firstSeries.data.map((point) => Array.isArray(point) ? point[0] : point),
       boundaryGap: false,
     },
-    yAxis: { type: "value" },
+    yAxis: { type: "value" as const },
     series: config.series.map((serie) => ({
       name: serie.name,
-      type: "line",
+      type: "line" as const,
       smooth: true,
       symbol: "circle",
       symbolSize: 8,
       data: serie.data,
     })),
   };
+  return option;
 }
 
 export function buildBarChartOption(config: ChartConfig) {
@@ -37,20 +39,24 @@ export function buildBarChartOption(config: ChartConfig) {
     Array.isArray(point) ? point[0] : point,
   );
 
-  return {
+  const option: EChartsOption = {
     title: { text: config.title, left: "left" },
-    tooltip: { trigger: "axis", axisPointer: { type: "shadow" } },
+    tooltip: {
+      trigger: "axis" as const,
+      axisPointer: { type: "shadow" as const },
+    },
     legend: { bottom: 0 },
     grid: { left: 32, right: 12, top: 48, bottom: 48 },
-    xAxis: { type: "category", data: categories },
-    yAxis: { type: "value" },
+    xAxis: { type: "category" as const, data: categories },
+    yAxis: { type: "value" as const },
     series: config.series.map((serie) => ({
       name: serie.name,
-      type: "bar",
+      type: "bar" as const,
       data: serie.data.map((point) => (Array.isArray(point) ? point[1] : point)),
       barMaxWidth: 28,
     })),
   };
+  return option;
 }
 
 export function buildRadarChartOption(config: ChartConfig) {
@@ -58,14 +64,14 @@ export function buildRadarChartOption(config: ChartConfig) {
     throw new Error("Radar chart requires indicators and series data");
   }
 
-  return {
+  const option: EChartsOption = {
     title: { text: config.title, left: "left" },
     tooltip: {},
     legend: { bottom: 0 },
     radar: { indicator: config.indicators },
     series: config.series.map((serie) => ({
       name: serie.name,
-      type: "radar",
+      type: "radar" as const,
       data: [
         {
           value: Array.isArray(serie.data) ? serie.data : [],
@@ -75,6 +81,7 @@ export function buildRadarChartOption(config: ChartConfig) {
       areaStyle: { opacity: 0.1 },
     })),
   };
+  return option;
 }
 
 export function buildChartOptions(payload: AnalyticsPayload) {
