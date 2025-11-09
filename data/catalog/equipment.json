@@ -2,7 +2,7 @@
   {
     "id": "EQ-001",
     "code": "BR-500",
-    "name": "Stainless Steel Bioreactor 500L",
+    "name": "Stainless Steel Bioreactor 4500L",
     "hourly_rate": 185,
     "capacity_liters": 500,
     "work_center_id": "WC-01"
