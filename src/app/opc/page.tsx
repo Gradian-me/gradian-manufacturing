@@ -79,7 +79,7 @@ export default function OpcPage() {
               <p>{activeScenario.description}</p>
             </CardContent>
           </Card>
-          <OpcViewer graph={activeScenario.graph} />
+          <OpcViewer key={activeScenario.id} graph={activeScenario.graph} />
         </>
       ) : null}
     </div>

@@ -1,4 +1,42 @@
 {
+  "groups": [
+    { "id": "phase-prep", "label": "Preparation", "phase_order": 1, "color": "#C7D2FE", "collapsed_default": false },
+    { "id": "phase-ster", "label": "Sterilization", "phase_order": 2, "color": "#DDD6FE", "collapsed_default": false },
+    { "id": "phase-charge", "label": "Charging", "phase_order": 3, "color": "#E0E7FF", "collapsed_default": false },
+    { "id": "phase-inoc", "label": "Inoculation", "phase_order": 4, "color": "#E9D5FF", "collapsed_default": false },
+    { "id": "phase-culture", "label": "Culture", "phase_order": 5, "color": "#DDD6FE", "collapsed_default": false },
+    { "id": "phase-harvest", "label": "Harvest", "phase_order": 6, "color": "#C4B5FD", "collapsed_default": false },
+    { "id": "phase-cip", "label": "CIP/SIP", "phase_order": 7, "color": "#DBEAFE", "collapsed_default": false },
+    { "id": "phase-qa", "label": "QA/Release", "phase_order": 8, "color": "#EDE9FE", "collapsed_default": false }
+  ],
+  "nodes": [
+    { "id": "prep-media", "label": "Prepare Media", "groupId": "phase-prep", "kind": "operation", "duration_min": 120, "required_equipment_ids": ["EQ-001"], "required_material_ids": ["MAT-001", "MAT-002"], "sop_ref": "SOP-PREP-001", "quality_gate": false },
+    { "id": "prep-calibrate", "label": "Calibrate Sensors", "groupId": "phase-prep", "kind": "check", "duration_min": 45, "required_equipment_ids": ["EQ-001"], "required_material_ids": ["MAT-005", "MAT-006"], "sop_ref": "SOP-CAL-004", "quality_gate": true },
+    { "id": "ster-cip", "label": "CIP Cycle", "groupId": "phase-ster", "kind": "operation", "duration_min": 60, "required_equipment_ids": ["EQ-003"], "required_material_ids": [], "sop_ref": "SOP-CIP-101", "quality_gate": false },
+    { "id": "ster-sip", "label": "SIP Cycle", "groupId": "phase-ster", "kind": "operation", "duration_min": 90, "required_equipment_ids": ["EQ-003"], "required_material_ids": [], "sop_ref": "SOP-SIP-101", "quality_gate": true },
+    { "id": "charge-components", "label": "Charge Components", "groupId": "phase-charge", "kind": "operation", "duration_min": 70, "required_equipment_ids": ["EQ-001"], "required_material_ids": ["MAT-003", "MAT-004"], "sop_ref": "SOP-CHR-010", "quality_gate": false },
+    { "id": "inoc-sample", "label": "Inoculate Culture", "groupId": "phase-inoc", "kind": "operation", "duration_min": 50, "required_equipment_ids": ["EQ-001"], "required_material_ids": ["MAT-002"], "sop_ref": "SOP-INO-201", "quality_gate": true },
+    { "id": "culture-monitor", "label": "Monitor Culture", "groupId": "phase-culture", "kind": "hold", "duration_min": 1440, "required_equipment_ids": ["EQ-001"], "required_material_ids": [], "sop_ref": "SOP-CUL-301", "quality_gate": false },
+    { "id": "culture-adjust", "label": "Adjust Feed", "groupId": "phase-culture", "kind": "operation", "duration_min": 30, "required_equipment_ids": ["EQ-001"], "required_material_ids": ["MAT-002"], "sop_ref": "SOP-CUL-305", "quality_gate": false },
+    { "id": "harvest-clarify", "label": "Clarify Harvest", "groupId": "phase-harvest", "kind": "operation", "duration_min": 90, "required_equipment_ids": ["EQ-002"], "required_material_ids": [], "sop_ref": "SOP-HAR-401", "quality_gate": false },
+    { "id": "harvest-chrom", "label": "Chromatography Capture", "groupId": "phase-harvest", "kind": "operation", "duration_min": 120, "required_equipment_ids": ["EQ-002"], "required_material_ids": ["MAT-003"], "sop_ref": "SOP-CHM-501", "quality_gate": true },
+    { "id": "cip-flush", "label": "Final CIP Flush", "groupId": "phase-cip", "kind": "operation", "duration_min": 45, "required_equipment_ids": ["EQ-003"], "required_material_ids": [], "sop_ref": "SOP-CIP-110", "quality_gate": false },
+    { "id": "qa-release", "label": "QA Release Review", "groupId": "phase-qa", "kind": "check", "duration_min": 60, "required_equipment_ids": [], "required_material_ids": [], "sop_ref": "SOP-QA-701", "quality_gate": true }
+  ],
+  "edges": [
+    { "id": "edge-prep-media-cal", "source": "prep-media", "target": "prep-calibrate", "relation": "NEXT", "critical": true },
+    { "id": "edge-prep-ster-cip", "source": "prep-calibrate", "target": "ster-cip", "relation": "NEXT", "critical": true },
+    { "id": "edge-ster-cip-sip", "source": "ster-cip", "target": "ster-sip", "relation": "NEXT", "critical": true },
+    { "id": "edge-ster-charge", "source": "ster-sip", "target": "charge-components", "relation": "NEXT", "critical": true },
+    { "id": "edge-charge-inoc", "source": "charge-components", "target": "inoc-sample", "relation": "NEXT", "critical": true },
+    { "id": "edge-inoc-culture", "source": "inoc-sample", "target": "culture-monitor", "relation": "NEXT", "critical": true },
+    { "id": "edge-culture-monitor-adjust", "source": "culture-monitor", "target": "culture-adjust", "relation": "PARALLEL", "critical": false, "condition_label": "As Needed" },
+    { "id": "edge-culture-harvest", "source": "culture-monitor", "target": "harvest-clarify", "relation": "NEXT", "critical": true },
+    { "id": "edge-harvest-chrom", "source": "harvest-clarify", "target": "harvest-chrom", "relation": "NEXT", "critical": true },
+    { "id": "edge-chrom-qa", "source": "harvest-chrom", "target": "qa-release", "relation": "QA", "critical": true },
+    { "id": "edge-harvest-cip", "source": "harvest-chrom", "target": "cip-flush", "relation": "PARALLEL", "critical": false },
+    { "id": "edge-cip-qa", "source": "cip-flush", "target": "qa-release", "relation": "REQUIRES", "critical": true }
+  ],
   "scenarios": [
     {
       "id": "cell-therapy-production",

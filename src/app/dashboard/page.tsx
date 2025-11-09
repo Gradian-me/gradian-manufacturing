@@ -15,7 +15,7 @@ import { EChart } from "@/components/charts/echart";
 import { useAnalytics } from "@/features/analytics/hooks/use-analytics";
 import { AnalyticsKpiGrid } from "@/features/analytics/components/kpi-grid";
 import { buildChartOptions } from "@/features/analytics/utils/chart-options";
-import type { AnalyticsPayload } from "@/lib/types/analytics";
+import type { AnalyticsPayload, SeriesPointTuple } from "@/lib/types/analytics";
 
 type SavedFilters = {
   dateRange: string;
@@ -58,8 +58,9 @@ function applyFilters(
     clone.charts.costVariance.series = clone.charts.costVariance.series.map(
       (series) => ({
         ...series,
-        data: series.data.filter((entry) =>
-          Array.isArray(entry) ? entry[0] === filters.template : entry,
+        data: series.data.filter(
+          (entry): entry is SeriesPointTuple =>
+            Array.isArray(entry) && entry[0] === filters.template,
         ),
       }),
     );
